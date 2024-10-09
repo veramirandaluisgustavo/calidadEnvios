@@ -1,0 +1,44 @@
+/* Estilo de orders.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.nav-buttons .button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+form {
+    margin: 20px;
+}
+
+.client-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.client-details th, .client-details td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.client-details th {
+    background-color: #007bff;
+    color: white;
+}

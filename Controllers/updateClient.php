@@ -6,12 +6,14 @@ $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
 $adresse = $_POST['adresse'];
 $telephone = $_POST['telephone'];
+$status = $_POST['status']; // Captura el nuevo estado
 
 $sql = "UPDATE client 
 SET nom_client = '$nom', 
 prenom_client = '$prenom', 
 adresse_client = '$adresse', 
-telephone_client = '$telephone' 
+telephone_client = '$telephone', 
+status = '$status' 
 WHERE Id_client = $id";
 
 if ($conn->query($sql) === TRUE) {
@@ -19,3 +21,4 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error updating record: " . $conn->error;
 }
+?>
