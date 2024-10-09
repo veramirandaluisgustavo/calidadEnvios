@@ -16,6 +16,9 @@
             <h1>LA7AGLI</h1>
         </div>
         <div class="nav-buttons">
+            <a href="./orders.php">
+                <div class="button">See Orders</div>
+            </a>
             <a href="./login.php">
                 <div class="button">Log In</div>
             </a>

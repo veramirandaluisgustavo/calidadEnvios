@@ -16,7 +16,7 @@
         </div>
         <div class="product-info">
             <?php include '../controllers/productInfo.php'; ?>
-            <h1><?= $product . " " . $price . "DZD" ?></h2>
+            <h1><?= $product . " " . $price . "DZD" ?></h1>
         </div>
         <div class="nav-buttons">
             <a href="./home.php">
@@ -51,13 +51,23 @@
         <h1>Edit Client Information</h1>
         <input type='hidden' name='id' value='<?= $row["Id_client"] ?>'>
         <label for='nom'>First Name:</label>
-        <input type='text' id='nom' name='nom' value='<?= $row["nom_client"] ?>'>
+        <input type='text' id='nom' name='nom' value='<?= $row["nom_client"] ?>' required>
+        
         <label for='prenom'>Family Name:</label>
-        <input type='text' id='prenom' name='prenom' value='<?= $row["prenom_client"] ?>'>
-        <label for='adresse'>Adress:</label>
-        <input type='text' id='adresse' name='adresse' value='<?= $row["adresse_client"] ?>'>
+        <input type='text' id='prenom' name='prenom' value='<?= $row["prenom_client"] ?>' required>
+        
+        <label for='adresse'>Address:</label>
+        <input type='text' id='adresse' name='adresse' value='<?= $row["adresse_client"] ?>' required>
+        
         <label for='telephone'>Phone Number:</label>
-        <input type='text' id='telephone' name='telephone' value='<?= $row["telephone_client"] ?>'>
+        <input type='text' id='telephone' name='telephone' value='<?= $row["telephone_client"] ?>' required>
+        
+        <label for='status'>Status:</label>
+        <select id='status' name='status'>
+            <option value='Pending' <?= ($row["status"] == 'Pending') ? 'selected' : ''; ?>>Pending</option>
+            <option value='Delivered' <?= ($row["status"] == 'Delivered') ? 'selected' : ''; ?>>Delivered</option>
+        </select>
+        
         <input type='submit' value='Update'>
     </form>
 </body>
